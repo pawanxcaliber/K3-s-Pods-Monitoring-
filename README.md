@@ -4,7 +4,7 @@
 This project demonstrates a production-grade **Observability Stack** deployed on a hybrid **2-Node Kubernetes (K3s) Cluster**. The system monitors hardware metrics (CPU/RAM), aggregates application logs, and traces distributed transactions across two physical laptops acting as a distributed infrastructure.
 
 The goal was to simulate a real-world **On-Premise Data Center** environment where a "Control Plane" manages resources and observability for "Worker Nodes."
-
+## Note : All IP address here are temperory, dynamic IP assigning from Router
 Screenshot: 
 <img width="1920" height="938" alt="image" src="https://github.com/user-attachments/assets/cb8adc9b-fc1c-4be8-9ee1-9daa5d4a3c9f" />
 <img width="1915" height="935" alt="image" src="https://github.com/user-attachments/assets/815724a5-fd23-4f98-89f1-9fddddd0e068" />
