@@ -1,0 +1,36 @@
+# 1. Storage Configuration (Local Filesystem)
+persistence:
+  enabled: true
+  storageClassName: local-path
+  accessModes:
+    - ReadWriteOnce
+  size: 5Gi
+
+tempo:
+  storage:
+    trace:
+      backend: local
+      local:
+        path: /var/tempo/traces
+      wal:
+        path: /var/tempo/wal
+
+# 2. OpenTelemetry Receiver Ports (The "Ears" of Tempo)
+distributor:
+  receivers:
+    otlp:
+      protocols:
+        grpc:
+          endpoint: "0.0.0.0:4317"
+        http:
+          endpoint: "0.0.0.0:4318"
+
+# 3. Tolerations (The "VIP Pass" for the Master Node)
+tolerations:
+  - key: "hardware"
+    operator: "Equal"
+    value: "high-performance"
+    effect: "NoSchedule"
+  - key: "node-role.kubernetes.io/master"
+    operator: "Exists"
+    effect: "NoSchedule"
