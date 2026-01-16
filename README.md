@@ -5,6 +5,9 @@ This project demonstrates a production-grade **Observability Stack** deployed on
 
 The goal was to simulate a real-world **On-Premise Data Center** environment where a "Control Plane" manages resources and observability for "Worker Nodes."
 
+Screenshot: 
+<img width="1913" height="940" alt="image" src="https://github.com/user-attachments/assets/6831876e-e24e-48ae-9d70-f65c5d57f57c" />
+
 ---
 
 ## 🏗️ Architecture Design
